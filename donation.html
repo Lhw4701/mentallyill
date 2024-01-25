@@ -18,11 +18,13 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Document</title>
+
     <style>
         #footer {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
             height: auto;
             background-color: #819089;
             font-size: large;
@@ -67,6 +69,7 @@
 </head>
 
 <body>
+    <!-- PUT NAVBAR HERE -->
     <header class="navBar">
         <a href="index.html" style="text-decoration: none;">
             <div class="brand">
@@ -104,74 +107,74 @@
             </ul>
         </div>
     </header>
-    <div style="overflow: hidden; width: 100%; height: 350px">
-        <img src="kmh_assets/img/blogbanner.png" style="width: 100%;">
+    <div class="donationCard" data-aos="fade-up" data-aos-duration="1000">
+        <div class="donationImg">
+            <img src="kmh_assets/img/donationHeader.jpg" class="donationBanner">
+        </div>
+        <h1 class="donationHeader">Support
+            our
+            cause
+        </h1>
+        <h5 class="donationHeader">Donations will be used towards future campaigns</h5>
+        <form class="donationForm">
+            <div class="donorInfo">
+                <label for="name">Name:</label>
+                <input class="donationText" type="text" id="name" name="name" placeholder="Name" required>
+
+                <label for="email">Email:</label>
+                <input class="donationText" type="email" id="email" name="email" placeholder="Email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input class="donationText" type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="donationInfo">
+                <label for="amount">Donation Amount:</label>
+                <div class="quickSelectDono">
+                    <!-- Here I would like to give donors option to quick select 50$ 100$ 250$ -->
+                    <button type="button" onclick="setAmount(50)">50$</button>
+                    <button type="button" onclick="setAmount(100)">100$</button>
+                    <button type="button" onclick="setAmount(250)">250$</button>
+                </div>
+                <div class="currencyInput">
+                    <div class="currencySymbol">$</div>
+                    <input type="number" id="amount" name="amount" min="1" placeholder="Donation Amount" required>
+                </div>
+                <div class="paymentMethods">
+                    <p>Choose your payment method:</p>
+                    <div class="paymentMethods"
+                        style="display: flex; justify-content: space-between; align-items: center;">
+                        <input type="radio" id="visa" name="paymentMethod" value="visa">
+                        <label for="visa" class="paymentMethodLabel">
+                            <img src="kmh_assets/img/visa.png" alt="Visa" class="paymentMethodImage">
+                        </label>
+
+                        <input type="radio" id="mastercard" name="paymentMethod" value="mastercard">
+                        <label for="mastercard" class="paymentMethodLabel">
+                            <img src="kmh_assets/img/mastercard.png" alt="Mastercard" class="paymentMethodImage">
+                        </label>
+
+                        <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                        <label for="paypal" class="paymentMethodLabel">
+                            <img src="kmh_assets/img/paypal.png" alt="PayPal" class="paymentMethodImage">
+                        </label>
+                    </div>
+                </div>
+                <div class="cardNumberInput" style="display: none;">
+                    <label for="cardNumber">Card Number:</label>
+                    <input class="donationText" type="password" id="cardNumber" name="cardNumber"
+                        placeholder="XXXX-XXXX-XXXX">
+                </div>
+
+                <div class="paypalAccountInput" style="display: none">
+                    <label for="paypalAccount">PayPal Account:</label>
+                    <input class="donationText" type="email" id="paypalAccount" name="paypalAccount"
+                        placeholder="Paypal Account Email">
+                </div>
+                <input class="donationButton" type="submit" value="Donate">
+        </form>
     </div>
-    <div class="blogMain">
-        <h1 style="margin-bottom: 30px;">BLOG</h1>
-        <div class="blogCategories">
-            <a href="sdaCategory.html"><button class="categoryBtn">Stress, Depression & Anxiety</button></a>
-            <a href="scCategory.html"><button class="categoryBtn">Self Care</button></a>
-            <a href="othersCategory.html"><button class="categoryBtn">Others</button></a>
-            <a href="blogs.html"><button class="categoryBtn">View All</button></a>
-        </div>
-        <div class="blogList">
-            <a href="copestressblog.html">
-                <div class="blogCard" data-aos="fade-right" data-aos-duration="1000">
-                    <img src="kmh_assets/img/stress.png" class="blogImg">
-                    <div class="blogBody">
-                        <h5 class="blogTitle">How to cope with stress</h5>
-                        <p class="blogContent">Stress is an essential driver to success but are you overdoing it? In the
-                            fast-paced world we live in, stress has become an inevitable part of our lives. Whether it's
-                            work pressures, personal challenges, or unforeseen circumstances, stress can take a toll on
-                            our physical and mental well-being. The good news is that there are practical strategies to
-                            cope with stress effectively.
-                        </p>
-                        <div class="blogMeta">24th Jan 2024 | Stress, Depression & Anxiety</div>
-                    </div>
-                </div>
-            </a>
-            <a href="getoverexblog.html">
-                <div class="blogCard" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="blogBody">
-                        <h5 class="blogTitle">Moving On: Getting over your ex</h5>
-                        <p class="blogContent">Breaking up with someone you once shared a deep connection with can be an
-                            emotionally challenging experience. The journey to healing and moving on is unique for each
-                            individual, but there are some universally effective strategies that can help you navigate
-                            the path to emotional recovery. In this blog, we'll explore practical tips on how to get
-                            over your ex and embark on a new chapter of personal growth and self-discovery.
-                        </p>
-                        <div class="blogMeta">24th Jan 2024 | Others</div>
-                    </div>
-                    <img src="kmh_assets/img/exblog.png" class="blogImg">
-                </div>
-            </a>
-            <a href="selflove1.html">
-                <div class="blogCard" data-aos="fade-right" data-aos-duration="1000">
-                    <img src="kmh_assets/img/selfcare.png" class="blogImg">
-                    <div class="blogBody">
-                        <h5 class="blogTitle">The importance of loving yourself</h5>
-                        <p class="blogContent">In a world that often emphasizes external validation and societal
-                            expectations, the concept of self-love is a beacon of light guiding us towards a healthier
-                            and more fulfilling life. Far from being a fleeting trend, the importance of self-love
-                            extends deep into the roots of our well-being.
-                        </p>
-                        <div class="blogMeta">24th Jan 2024 | Self Care</div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="paginationBar">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="blogs.html">1</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="blogs2.html#blogLink">2</a>
-                </li>
-            </ul>
-        </div>
     </div>
+
     <div id="footer">
         <div id="footer-area">
             <div>
@@ -215,7 +218,35 @@
         </div>
     </div>
 
+
     <script>
+        function setAmount(value) {
+            document.getElementById("amount").value = value;
+        }
+
+        function togglePaymentInputs() {
+            var visa = document.getElementById("visa");
+            var mastercard = document.getElementById("mastercard");
+            var paypal = document.getElementById("paypal");
+            var cardNumberInput = document.querySelector(".cardNumberInput");
+            var paypalAccountInput = document.querySelector(".paypalAccountInput");
+
+            if (visa.checked || mastercard.checked) {
+                cardNumberInput.style.display = "flex";
+                cardNumberInput.style.flexDirection = "column";
+                paypalAccountInput.style.display = "none";
+            } else if (paypal.checked) {
+                paypalAccountInput.style.display = "flex";
+                paypalAccountInput.style.flexDirection = "column";
+                cardNumberInput.style.display = "none";
+            }
+        }
+
+        var paymentMethodRadios = document.querySelectorAll('input[name="paymentMethod"]');
+        paymentMethodRadios.forEach(function (radio) {
+            radio.addEventListener('change', togglePaymentInputs);
+        });
+
         AOS.init();
     </script>
 </body>

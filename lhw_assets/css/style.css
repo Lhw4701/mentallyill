@@ -15,17 +15,7 @@ img {
 #content {
     flex: 1;
     background-color: #819089;
-    
-}
 
-#footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    background-color: #819089;
-    font-size: large;
-    margin-top: 30px;
 }
 
 #content {
@@ -38,18 +28,28 @@ hr {
 }
 
 #footer-area {
-    background-color: white;
+    background-color: rgb(168, 184, 143);
     width: 100%;
     display: flex;
     flex-direction: row;
     padding: 0 20px;
+    padding-top: 30px;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    background-color: #819089; 
+    font-size: large;
 }
 
 #footer-area>div {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    line-height: 30px;
+    line-height: 40px;
     color: black;
 }
 
@@ -95,29 +95,30 @@ hr {
     margin: 10px;
 }
 
-#ss_header{
+#ss_header {
     text-align: center;
     margin-top: 50px;
 }
 
 #card_info {
     border: 1px solid black;
-    background-color: rgb(207, 216, 193);
+    box-shadow: 5px 5px black;
+    background-color: white;
     height: 600px;
     width: auto;
     padding: 80px;
     margin: 30px;
-    border-radius: 30px;
+    border-radius: 5px;
     font-size: large;
     line-height: 40px;
 }
 
-#cards{
+#cards {
     display: flex;
     flex-direction: row;
 }
 
-#bgImg{
+#bgImg {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -127,13 +128,14 @@ hr {
 
 #M_V_G {
     text-align: center;
+    margin-bottom: 40px;
 }
 
 #team {
     margin: 5rem;
 }
 
-#team  {
+#team {
     text-align: center;
 
 }
@@ -148,17 +150,13 @@ hr {
 }
 
 .team-card>img {
-    width: 15rem;
-    height: 15rem;
+    width: 13rem;
+    height: 13rem;
     border-radius: 50%;
     margin-top: 5rem;
     border: 3px solid black;
     object-fit: fit;
 }
-
-/* .team-card>img:hover {
-    border: 5px solid  rgb(207, 216, 193);
-} */
 
 .team-card>p {
     padding-top: 50px;
