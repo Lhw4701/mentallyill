@@ -14,6 +14,8 @@ img {
 
 #content {
     flex: 1;
+    background-color: #819089;
+    
 }
 
 #footer {
@@ -21,16 +23,18 @@ img {
     flex-direction: column;
     align-items: center;
     height: auto;
-    background-color: #5199b7;
+    background-color: #819089;
     font-size: large;
+    margin-top: 30px;
 }
 
 #content {
-    padding: 0 100px;
+    padding: 0 200px;
 }
 
 hr {
     width: 100%;
+    color: white;
 }
 
 #footer-area {
@@ -50,7 +54,7 @@ hr {
 }
 
 #footer-area>div>h2 {
-    color: #5199b7;
+    color: #819089;
     font-size: xx-large;
 }
 
@@ -91,21 +95,33 @@ hr {
     margin: 10px;
 }
 
-#demo {
+#ss_header{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#card_info {
     border: 1px solid black;
-    background-color: lightblue;
+    background-color: rgb(207, 216, 193);
     height: 600px;
-    width: 500px;
+    width: auto;
     padding: 80px;
-    margin: auto;
+    margin: 30px;
     border-radius: 30px;
     font-size: large;
-    line-height: 50px;
+    line-height: 40px;
+}
+
+#cards{
+    display: flex;
+    flex-direction: row;
 }
 
 #bgImg{
-    width: 100%;
-    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 700px;
     border-radius: 5%;
 }
 
@@ -114,7 +130,12 @@ hr {
 }
 
 #team {
+    margin: 5rem;
+}
+
+#team  {
     text-align: center;
+
 }
 
 #team>div {
@@ -122,22 +143,26 @@ hr {
     margin: auto;
 }
 
+.team-card {
+    margin: auto;
+}
+
 .team-card>img {
-    width: 17rem;
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
-}
-
-.team-card img {
-    transition: all 0.1s ease-in-out;
     margin-top: 5rem;
-    border-radius: 50%;
     border: 3px solid black;
+    object-fit: fit;
 }
 
-.team-card>img:hover {
-    border: 5px solid #5199b7;
-}
+/* .team-card>img:hover {
+    border: 5px solid  rgb(207, 216, 193);
+} */
 
 .team-card>p {
     padding-top: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-size: larger;
 }
